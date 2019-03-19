@@ -153,5 +153,14 @@ extension TableViewController: TableViewInputCellDelegate {
         // 变更后
         state = State(todos: state.todos, text: text)
     }
+    
+    /*测试State View Controller
+     在基于state的实现下，用户的操作被统一为状态的变更，而状态的变更将统一地4去更新当前的UI.这让View Controller的测试变得容易的多。我们可以将本来混杂在一起的行为分离开来:首先，测试状态变更可以导致正确地UI;然后，测试用户输入可以导致正确地状态变更，这样即可覆盖View Controller的测试。
+     */
+    // 先测试状态变更导致的UI变化，在单元测试中：
+    func testSettingState() {
+        // 初始状态
+//        XCTAssertEqual()
+    }
 }
 
